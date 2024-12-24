@@ -1,0 +1,79 @@
+{
+  "version": "1.0",
+  "menus": [
+    {
+      "id": "dashboard",
+      "title": "仪表盘",
+      "icon": "dashboard",
+      "route": "/dashboard",
+      "permissions": ["view_dashboard"],
+      "sort": 1
+    },
+    {
+      "id": "system",
+      "title": "系统管理",
+      "icon": "settings",
+      "sort": 2,
+      "children": [
+        {
+          "id": "users",
+          "title": "用户管理",
+          "icon": "user",
+          "route": "/system/users",
+          "permissions": ["manage_users"],
+          "sort": 1
+        },
+        {
+          "id": "roles",
+          "title": "角色管理",
+          "icon": "role",
+          "route": "/system/roles",
+          "permissions": ["manage_roles"],
+          "sort": 2
+        }
+      ]
+    },
+    {
+      "id": "reports",
+      "title": "报表中心",
+      "icon": "chart",
+      "sort": 3,
+      "children": [
+        {
+          "id": "daily",
+          "title": "日报表",
+          "icon": "file",
+          "route": "/reports/daily",
+          "permissions": ["view_reports"],
+          "sort": 1
+        },
+        {
+          "id": "monthly",
+          "title": "月报表",
+          "icon": "file",
+          "route": "/reports/monthly",
+          "permissions": ["view_reports"],
+          "sort": 2,
+          "children": [
+            {
+              "id": "income",
+              "title": "收入报表",
+              "icon": "money",
+              "route": "/reports/monthly/income",
+              "permissions": ["view_income_reports"],
+              "sort": 1
+            },
+            {
+              "id": "expense",
+              "title": "支出报表",
+              "icon": "money",
+              "route": "/reports/monthly/expense",
+              "permissions": ["view_expense_reports"],
+              "sort": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
